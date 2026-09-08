@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#app {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+.add-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#dueDate {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#addBtn {
+    background: #333;
+    color: white;
+}
+#addBtn:hover {
+    background: #555;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filters button {
+    background: #e9ecef;
+    color: #333;
+}
+.filters button:hover {
+    background: #d6d9dc;
+}
+#taskList {
+    list-style: none;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+.task-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    word-break: break-word;
+}
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+.done-btn {
+    background: #28a745;
+    color: white;
+}
+.done-btn:hover {
+    background: #218838;
+}
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+.delete-btn:hover {
+    background: #c82333;
+}
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+#counter {
+    color: #666;
+    font-size: 14px;
+}
+#clearDoneBtn {
+    background: #6c757d;
+    color: white;
+}
+#clearDoneBtn:hover {
+    background: #5a6268;
+}
+@media (max-width: 600px) {
+    #app {
+        padding: 20px;
+    }
+    .add-section {
+        flex-direction: column;
+    }
+    #taskInput,
+    #dueDate,
+    #addBtn {
+        width: 100%;
+    }
+    .task-item {
+        flex-wrap: wrap;
+    }
+}
